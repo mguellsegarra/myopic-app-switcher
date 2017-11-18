@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyopicSampleApplication</string>
+    <string name="important_text">This text is very important</string>
+</resources>
