@@ -42,3 +42,13 @@ public class MyopicSampleApplication extends Application {
     }
 }
 ```
+
+## Contributing 
+
+Feel free to open any pull request if you'd like to add new features or improve any part :)
+
+## License 
+
+The MIT License (MIT)
+
+Copyright (c) 2017 Marc Güell Segarra
