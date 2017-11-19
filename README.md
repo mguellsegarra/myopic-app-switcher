@@ -15,7 +15,7 @@ After some research, I only found two ways to achieve the modification of the th
 
 ## Code
 
-Myopic internally handles `onPause()` and `onResume()` methods in the activity lifecyle in order to insert an overlaying view when the app goes to the background.
+Myopic internally handles `onPause()` and `onResume()`, and other lifecycle methods in the activity in order to insert an overlaying view when the app goes to the background.
 
 This overlaying view can be an automatic generated blurred image of your current screen or an image that you'll have to specify by passing a drawable id.
 
@@ -34,8 +34,17 @@ Add JCenter in gradle project file:
 Add this line to your module project:
 
 ```groovy
-compile 'cat.mguellsegarra:myopic:0.14'
+compile 'cat.mguellsegarra:myopic:0.15'
 ```
+
+You also have to insert these lines in your android default config section:
+
+```groovy
+        renderscriptTargetApi 26
+        renderscriptSupportModeEnabled true
+```
+
+These are needed for BlurKit, and ideally, the target API for RenderScript must match to your `targetSdkVersion` value.
 
 ## Usage
 
