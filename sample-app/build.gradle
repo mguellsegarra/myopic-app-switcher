@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.1'
     defaultConfig {
         applicationId "cat.mguellsegarra.myopicsample"
         minSdkVersion 17
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-        renderscriptTargetApi 24
+        renderscriptTargetApi 26
         renderscriptSupportModeEnabled true
     }
     buildTypes {

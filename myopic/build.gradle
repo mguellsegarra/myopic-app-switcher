@@ -3,19 +3,17 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: "com.jfrog.bintray"
 
 group = 'cat.mguellsegarra'
-version = '0.14'
+version = '0.15'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.1'
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 26
+        targetSdkVersion 24
         versionCode 1
         versionName "1.0"
-        renderscriptTargetApi 24
-        renderscriptSupportModeEnabled true
     }
 
     buildTypes {
@@ -42,7 +40,7 @@ install {
             packaging 'aar'
             groupId 'cat.mguellsegarra'
             artifactId 'myopic'
-            version '0.14'
+            version '0.15'
 
             licenses {
                 license {
@@ -79,9 +77,9 @@ bintray {
         licenses = ['MIT']
         vcsUrl = 'https://github.com/mguellsegarra/myopic-app-switcher.git'
         version {
-            name = '0.14'
-            desc = 'Myopic 0.14'
-            vcsTag = '0.14'
+            name = '0.15'
+            desc = 'Myopic 0.15'
+            vcsTag = '0.15'
             attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
         }
     }
