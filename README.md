@@ -5,6 +5,14 @@
   
 ![myopic](https://github.com/mguellsegarra/myopic-app-switcher/raw/master/myopic_gif.gif)
 
+## Code
+
+Myopic internally handles `onPause()` and `onResume()` methods in the activity lifecyle in order to insert an overlaying view when the app goes to the background.
+
+This overlaying view can be an automatic generated blurred image of your current screen or an image that you'll have to specify by passing a drawable id.
+
+The blur is accomplished thanks to [BlurKit](https://github.com/wonderkiln/blurkit-android) library.
+
 ## Installing
 
 Add JCenter in gradle project file:
@@ -42,6 +50,21 @@ public class MyopicSampleApplication extends Application {
     }
 }
 ```
+
+Extend your activities or your own base activity from `MyopicActivity`:
+
+```java
+public class MainActivity extends MyopicActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}
+```
+
+Et voilà!
 
 ## Contributing 
 
