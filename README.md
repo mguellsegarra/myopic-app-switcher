@@ -45,7 +45,7 @@ public class MyopicSampleApplication extends Application {
 
 ## Contributing 
 
-Feel free to open any pull request if you'd like to add new features or improve any part :)
+Feel free to open any pull request if you'd like to add new features or improve Myopic :)
 
 ## License 
 
