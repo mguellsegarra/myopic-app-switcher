@@ -46,6 +46,14 @@ You also have to insert these lines in your android default config section:
 
 These are needed for BlurKit, and ideally, the target API for RenderScript must match to your `targetSdkVersion` value.
 
+Myopic uses appcompat-v7 support library, version 26.0.1. If you're using another version in your application, or you're getting dependencies problems, you can exclude the version attached to the library, and let Gradle resolve the dependency with your desired version:
+
+```groovy
+    compile 'cat.mguellsegarra:myopic:0.15', {
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+    }
+```
+
 ## Usage
 
 Initialize Myopic in your sample application:
