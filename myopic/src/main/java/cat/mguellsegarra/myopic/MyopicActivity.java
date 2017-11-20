@@ -204,4 +204,8 @@ public class MyopicActivity extends AppCompatActivity {
         imageView.setImageDrawable(drawable);
         return imageView;
     }
+
+    public void updateBlurredView() {
+        handle_onPostResume();
+    }
 }
