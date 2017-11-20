@@ -93,15 +93,15 @@ Et voilà!
 
 ## Caveats
 
-In blur mode, Myopic will take an screenshot of your current view on `onPostResume()` method and apply blur from that view.
+In blur mode, Myopic will take a capture of your current view on `onPostResume()` method and apply blur from that view.
 
-I tried to take that screenshot in `onPause()` but sadly, I think that the app has not enough time to take the screenshot and add the view before Android sends the app to background.
+I tried to take that screenshot in `onPause()` but sadly, I think that the app has not enough time to take the capture and add the view before Android sends the app to background.
 
 For this reason, you'll appreciate that the blurred view sometimes doesn't match the last view you had in your application, because it's the screenshot that was taken just when the activity started.
 
-If you want, yo can use a method to manually update the blur screenshot, in your activity:
+If you want, you can use this method to manually force update the blur view, in your activity:
 
-`updateBlurScreenshot();`
+`updateBlurredView();`
 
 If somebody knows a way to achieve taking an screenshot just before the app goes to background, just ping me or open a PR.
 
